@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +21,7 @@ namespace Exercicio9
             if (livro != null)
             {
                 ListaDeLivros.Remove(livro);
-                Console.WriteLine("Livro removido com sucesso!");
+                Console.WriteLine("Livro removido!");
             }
             else
             {
@@ -68,7 +68,7 @@ namespace Exercicio9
             List<Livro> livrosFiltrados = ListaDeLivros.FindAll(l => l.Idioma == idioma);
             if (livrosFiltrados.Count > 0)
             {
-                Console.WriteLine($"Lista de Livros em {idioma}:");
+                Console.WriteLine($"Lista de Livros no idioma {idioma}:");
                 foreach (Livro livro in livrosFiltrados)
                 {
                     Console.WriteLine($"{livro.NomeLivro} - {livro.Autor.Nome} ({livro.Autor.IdiomaNativo})");
@@ -101,7 +101,7 @@ namespace Exercicio9
                 Console.WriteLine("Autores com livros em idiomas diferentes do idioma nativo:");
                 foreach (KeyValuePair<string, int> autor in autoresLivrosOutrosIdiomas)
                 {
-                    Console.WriteLine($"Autor: {autor.Key}, Quantidade de livros em outros idiomas: {autor.Value}");
+                    Console.WriteLine($"Autor: {autor.Key}, tem : {autor.Value} de livros em outros idiomas.");
                 }
             }
             else
